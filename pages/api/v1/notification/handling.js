@@ -20,6 +20,7 @@ export default async (req, res) => {
     if (statusCode != undefined) {
       newDoc.status.code = statusCode;
     }
+
     await firestore.collection("appointments").doc(orderId).set(newDoc);
 
     return res.status(200).json({ message: "ok", data: newDoc });
