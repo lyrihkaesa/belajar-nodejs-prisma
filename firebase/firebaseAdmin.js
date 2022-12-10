@@ -16,6 +16,8 @@ const serviceAccount = {
   client_x509_cert_url: process.env.FIREBASE_CLIENT_X509_CERT_URL,
 };
 
+console.log(serviceAccount);
+
 if (!getApps().length)
   initializeApp({
     credential: cert(serviceAccount),
