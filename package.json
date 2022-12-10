@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@prisma/client": "4.5.0",
-    "bcryptjs": "^2.4.3",
     "firebase-admin": "^11.3.0",
     "jsonwebtoken": "^8.5.1",
     "next": "13.0.0",
@@ -17,5 +16,21 @@
   },
   "devDependencies": {
     "prisma": "4.5.0"
-  }
+  },
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyrihkaesa/belajar-nodejs-prisma.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lyrihkaesa/belajar-nodejs-prisma/issues"
+  },
+  "homepage": "https://github.com/lyrihkaesa/belajar-nodejs-prisma#readme"
 }
