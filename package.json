@@ -1,23 +1,21 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "/src/server.js",
+  "name": "belajar-nodejs-prisma",
   "scripts": {
-    "start": "nodemon"
-    
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "vercel-build": "next build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^4.5.0",
+    "@prisma/client": "4.5.0",
     "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
+    "firebase-admin": "^11.3.0",
     "jsonwebtoken": "^8.5.1",
-    "prisma": "^4.5.0"
+    "next": "13.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "prisma": "4.5.0"
   }
 }
