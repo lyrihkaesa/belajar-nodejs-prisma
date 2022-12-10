@@ -4,7 +4,7 @@ export default async (req, res) => {
   const { method } = req;
   if (method === "POST") {
     const orderId = req.body.order_id;
-    const statusCode = req.body.status_code;
+    const transactionStatus = req.body.transaction_status;
     if (req.body === null) {
       return res.status(200).json({ message: "body tidak boleh kosong" });
     }
@@ -15,10 +15,17 @@ export default async (req, res) => {
 
     const doc = await firestore.collection("appointments").doc(orderId).get();
     let newDoc = doc.data();
-    newDoc.status.code = "paid";
     newDoc.status.updatedAt = Date.now();
-    if (statusCode != undefined) {
-      newDoc.status.code = statusCode;
+    if (transactionStatus != undefined) {
+      switch (transactionStatus) {
+        case "capture":
+        case "settlement":
+          newDoc.status.code = "paid";
+          break;
+
+        default:
+          break;
+      }
     }
 
     await firestore.collection("appointments").doc(orderId).set(newDoc);
